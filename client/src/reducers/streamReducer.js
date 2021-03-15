@@ -7,16 +7,16 @@ import {
   EDIT_STREAM,
 } from "../actions/types";
 
-const streamReducer = (state = {}, action) => {
+const streamReducer = (state = { streams: [], selected: null }, action) => {
   switch (action.type) {
     case FETCH_STREAM:
-      return { ...state, [action.payload.id]: action.payload };
+      return { ...state, selected: action.payload.stream };
     case CREATE_STREAM:
       return { ...state, [action.payload.id]: action.payload };
     case EDIT_STREAM:
       return { ...state, [action.payload.id]: action.payload };
     case FETCH_STREAMS:
-      return { ...state, ..._.mapKeys(action.payload, "id") };
+      return { ...state, streams: action.payload.streams };
     case DELETE_STREAM:
       return _.omit(state, action.payload);
     default:
