@@ -9,7 +9,6 @@ class StreamList extends Component {
   }
 
   renderAdmin(stream) {
-    console.log(stream.userId, this.props.currentUserId);
     if (stream.userId === this.props.currentUserId) {
       return (
         <div className="right floated content">
@@ -17,13 +16,13 @@ class StreamList extends Component {
             className="ui button primary"
             to={`/streams/edit/${stream._id}`}
           >
-            Edit
+            Editar
           </Link>
           <Link
             className="ui button negative"
             to={`/streams/delete/${stream._id}`}
           >
-            Delete
+            Borrar
           </Link>
         </div>
       );
@@ -52,7 +51,7 @@ class StreamList extends Component {
       return (
         <div style={{ textAlign: "right" }}>
           <Link to="/streams/new" className="ui button primary">
-            Create Stream
+            Crear Stream
           </Link>
         </div>
       );
@@ -62,7 +61,7 @@ class StreamList extends Component {
   render() {
     return (
       <div>
-        <h2>Streams</h2>
+        <h2>Todos los Streams</h2>
         <div className="ui celled list">{this.renderList()}</div>
         {this.renderCreate()}
       </div>

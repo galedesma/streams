@@ -42,7 +42,7 @@ class StreamShow extends Component {
 
   render() {
     if (!this.props.stream) {
-      return <div>Loading...</div>;
+      return <div>Cargando...</div>;
     }
 
     const { title, description } = this.props.stream;

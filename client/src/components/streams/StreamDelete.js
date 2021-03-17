@@ -18,10 +18,10 @@ class StreamDelete extends Component {
           onClick={() => this.props.deleteStream(id)}
           className="ui button negative"
         >
-          Delete
+          Borrar
         </button>
         <Link to="/" className="ui button">
-          Cancel
+          Cancelar
         </Link>
       </React.Fragment>
     );
@@ -29,9 +29,9 @@ class StreamDelete extends Component {
 
   renderContent() {
     if (!this.props.stream) {
-      return "Are you sure you want to delete this stream?";
+      return "Estas seguro de que quieres borrar este stream?";
     }
-    return `Are you sure you want to delete the stream with title: ${this.props.stream.title}`;
+    return `Estas seguro de que quieres borrar el stream con el título: ${this.props.stream.title}`;
   }
 
   render() {

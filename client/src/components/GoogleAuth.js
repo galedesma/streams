@@ -42,14 +42,14 @@ class GoogleAuth extends Component {
       return (
         <button onClick={this.onSignOutClick} className="ui red google button">
           <i className="google icon" />
-          Sign Out
+          Cerrar Sesión
         </button>
       );
     } else {
       return (
         <button onClick={this.onSignInClick} className="ui red google button">
           <i className="google icon" />
-          Sign In With Google
+          Iniciar Sesión
         </button>
       );
     }

@@ -15,11 +15,11 @@ class StreamEdit extends Component {
 
   render() {
     if (!this.props.stream) {
-      return <div>Loading...</div>;
+      return <div>Cargando...</div>;
     }
     return (
       <div>
-        <h3>Edit a stream</h3>
+        <h3>Edita el stream</h3>
         <StreamForm
           initialValues={_.pick(this.props.stream, "title", "description")}
           onSubmit={this.onSubmit}
