@@ -35,3 +35,30 @@ Para más información del backend de este proyecto, dirigirse a: [streams-backe
 Contiene los archivos de configuración necesarios para poder transmitir hacia la app. El usuario hará uso de Node-Media-Server para crear un servidor RTMP (Real Time Media Protocol) local, para luego configurar su software de grabación y transmisión de video de preferencia (se recomienda [OBS](https://obsproject.com/es)) correspondientemente.
 
 ## [Ir a la app](https://streams-galedesma.netlify.app)
+
+### Uso
+
+Actualmente la app solo puede ser usada para transmitir localmente. Siguiendo los pasos a continuación el usuario podrá ingresar con su cuenta de Google a la app, crear un stream y transmitir a la dirección correspondiente al stream creado, pero sólo el podrá verlo.
+
+Requisitos:
+
+- Node.js instalado, versión 10.0 en adelante.
+- Git Bash instalado.
+
+El usuario deberá:
+
+1. Descargar el contenido de la carpeta rtmp.
+2. Abrir la terminal de Bash en el directorio en donde guardó la carpeta rtmp.
+3. Correr el comando 'npm install'.
+4. Una vez instaladas las dependencias, correr el comando 'npm start'.
+5. Ingresar a la [app](https://streams-galedesma.netlify.app).
+6. Iniciar sesión con Google.
+7. Crear un stream e ingresar a dicho stream.
+8. Copiar el id de la dirección del stream creado. La dirección tendrá el siguiente formato "https://streams-galedesma.netlify.app/streams/id a copiar "
+9. Abrir su software de transmisión de video a usar. Se recomienda usar OBS.
+10. Configurar su escena para transmitir correspondientemente. Elegir una fuente de captura de video y de audio.
+11. En OBS, ir a la sección de Ajustes -> Emisión.
+12. Elegir Servicio -> Personalizado...
+13. Escribir rtmp://localhost/live en "Servidor"
+14. En clave de transmisión ingresar el id del stream creado, el "id a copiar" mencionado anteriomente.
+15. Ahora el usuario debería estar transmitiendo en el stream creado.
